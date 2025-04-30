@@ -1,14 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="google-site-verification" content="28e-eYgTG8I4BQWJAQhfuDMVnQEZK-OaQdzlsFnifSQ" />
   <meta charset="UTF-8">
-  <title>My GitHub Website</title>
+  <title>The Gorgeous George Show</title>
   <style>
-    body { font-family: Arial; text-align: center; padding: 50px; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: url('TGGS.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Impact, Arial, sans-serif;
+      color: white;
+      text-align: center;
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Top logo (normal, not fixed) */
+    .top-logo {
+      width: 100%;
+      padding: 20px 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .top-logo img {
+      max-width: 300px;
+      height: auto;
+    }
+
+    /* Main content area (video + slideshow) */
+    .page-content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      margin-bottom: 100px;
+    }
+
+    .video-box, .slideshow {
+      width: 500px;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px black;
+      background: #000;
+      position: relative;
+    }
+
+    .video-box video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slideshow img.active {
+      opacity: 1;
+      position: relative;
+    }
+
+    /* Bottom links (normal, not fixed to screen, but centered at page bottom) */
+    .bottom-links {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 40px;
+    }
+
+    .bottom-links img {
+      width: 300px; /* Twice the size */
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .bottom-links img:hover {
+      transform: scale(1.08);
+    }
   </style>
 </head>
+
 <body>
-  <h1>Hello from GitHub Pages!</h1>
-  <p>This is a simple website hosted on GitHub.</p>
+
+  <!-- Logo -->
+  <div class="top-logo">
+    <img src="Logo.PNG" alt="The Gorgeous George Show Logo">
+  </div>
+
+  <!-- Video and Slideshow -->
+  <div class="page-content">
+    <!-- Left side: Video -->
+    <div class="video-box">
+      <video src="Pathetic.mp4" controls muted></video>
+    </div>
+
+    <!-- Right side: Slideshow -->
+    <div class="slideshow">
+      <img src="1307(1).JPG" class="active" alt="Slide 1">
+      <img src="1307(2).jpg" alt="Slide 2">
+      <img src="1307(3).jpg" alt="Slide 3">
+    </div>
+  </div>
+
+  <!-- Bottom links -->
+  <div class="bottom-links">
+    <a href="youtube.html">
+      <img src="YTlinks.PNG" alt="Visit Merch Store">
+    </a>
+
+    <a href="merch.html">
+      <img src="GGmerch.PNG" alt="Visit Merch Store">
+    </a>
+
+    <a href="gallery.html">
+      <img src="Photo.PNG" alt="Photo Gallery">
+    </a>
+  </div>
+
+  <!-- Slideshow script -->
+  <script>
+    let slides = document.querySelectorAll('.slideshow img');
+    let currentSlide = 0;
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 3000); // change every 3 seconds
+  </script>
+
+<video id="bg-music" src="Saxophone.mp4" autoplay loop muted playsinline style="display: none;"></video>
+
+<button id="music-toggle" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #00ffcc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+">
+  ▶ Play Music
+</button>
+
+<script>
+  const music = document.getElementById('bg-music');
+  const button = document.getElementById('music-toggle');
+
+  let musicStarted = false;
+
+  button.addEventListener('click', () => {
+    if (!musicStarted) {
+      music.muted = false;
+      music.play();
+      button.textContent = '⏸ Pause Music';
+      musicStarted = true;
+    } else {
+      if (music.paused) {
+        music.play();
+        button.textContent = '⏸ Pause Music';
+      } else {
+        music.pause();
+        button.textContent = '▶ Play Music';
+      }
+    }
+  });
+</script>
+
+
+
 </body>
 </html>
