@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
 
+    header {
+      background: black;
+      color: white;
+      padding: 30px 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      justify-items: center;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    a.back {
+      display: block;
+      margin: 40px auto;
+      color: black;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      display: none;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px black;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Gorgeous George Photo Gallery</header>
+
+  <div class="gallery">
+       <img src="Alpha Mate.jpeg" alt="">
+    <img src="ActionFigure1.jpeg" alt="">
+    <img src="Creep2.jpeg" alt="">
+    <img src="GAY UNIT.jpeg" alt="">
+    <img src="GG Friday Nights.jpeg" alt="">
+    <img src="Creep1.jpeg" alt="">
+    <img src="Cuck Hogan.jpeg" alt="">
+    <img src="EasterGG.jpeg" alt="">
+    <img src="Super Gay.jpeg" alt="">
+    <img src="Kiddens.jpeg" alt="">
+    <img src="Shocker.jpeg" alt="">
+    <img src="SpunkyJunkie.jpeg" alt="">
+    <img src="Boston & Pirate Vs GG.png" alt="">
+    <img src="Fatsosaurus.jpeg" alt="">
+    <img src="" alt="">
+    <img src="Gallery16.JPG" alt="">
+    <img src="Gallery17.JPG" alt="">
+    <img src="Gallery18.JPG" alt="">
+    <img src="Gallery19.JPG" alt="">
+    <img src="Gallery20.JPG" alt="">
+    <img src="Gallery21.JPG" alt="">
+    <img src="Gallery22.JPG" alt="">
+    <img src="Gallery23.JPG" alt="">
+    <img src="Gallery24.JPG" alt="">
+    <img src="Gallery25.JPG" alt="">
+    <img src="Gallery26.JPG" alt="">
+    <img src="Gallery27.JPG" alt="">
+    <img src="Gallery28.JPG" alt="">
+    <img src="Gallery29.JPG" alt="">
+    <img src="Gallery30.JPG" alt="">
+    <img src="Gallery31.JPG" alt="">
+    <img src="Gallery32.JPG" alt="">
+    <img src="Gallery33.JPG" alt="">
+    <img src="Gallery34.JPG" alt="">
+    <img src="Gallery35.JPG" alt="">
+    <img src="Gallery36.JPG" alt="">
+    <img src="Gallery37.JPG" alt="">
+    <img src="Gallery38.JPG" alt="">
+    <img src="Gallery39.JPG" alt="">
+    <img src="Gallery40.JPG" alt="">
+    <img src="Gallery41.JPG" alt="">
+    <img src="Gallery42.JPG" alt="">
+    <img src="Gallery43.JPG" alt="">
+    <img src="Gallery44.JPG" alt="">
+    <img src="Gallery45.JPG" alt="">
+    <img src="Gallery46.JPG" alt="">
+    <img src="Gallery47.JPG" alt="">
+    <img src="Gallery48.JPG" alt="">
+    <img src="Gallery49.JPG" alt="">
+    <img src="Gallery50.JPG" alt="">
+    <img src="Gallery51.JPG" alt="">
+    <img src="Gallery52.JPG" alt="">
+    <img src="Gallery53.JPG" alt="">
+    <img src="Gallery54.JPG" alt="">
+    <img src="Gallery55.JPG" alt="">
+    <img src="Gallery56.JPG" alt="">
+    <img src="Gallery57.JPG" alt="">
+    <img src="Gallery58.JPG" alt="">
+    <img src="Gallery59.JPG" alt="">
+    <img src="Gallery60.JPG" alt="">
+    <img src="Gallery61.JPG" alt="">
+    <img src="Gallery62.JPG" alt="">
+    <img src="Gallery63.JPG" alt="">
+    <img src="Gallery64.JPG" alt="">
+    <img src="Gallery65.JPG" alt="">
+    <img src="Gallery66.JPG" alt="">
+    <img src="Gallery67.JPG" alt="">
+    <img src="Gallery68.JPG" alt="">
+    <img src="Gallery69.JPG" alt="">
+    <img src="Gallery70.JPG" alt="">
+    <img src="Gallery71.JPG" alt="">
+    <img src="Gallery72.JPG" alt="">
+    <img src="Gallery73.JPG" alt="">
+    <img src="Gallery74.JPG" alt="">
+    <img src="Gallery75.JPG" alt="">
+    <img src="Gallery76.JPG" alt="">
+    <img src="Gallery77.JPG" alt="">
+    <img src="Gallery78.JPG" alt="">
+    <img src="Gallery79.JPG" alt="">
+    <img src="Gallery80.JPG" alt="">
+    <img src="Gallery81.JPG" alt="">
+    <img src="Gallery82.JPG" alt="">
+    <img src="Gallery83.JPG" alt="">
+    <img src="Gallery84.JPG" alt="">
+    <img src="Gallery85.JPG" alt="">
+    <img src="Gallery86.JPG" alt="">
+    <img src="Gallery87.JPG" alt="">
+    <img src="Gallery88.JPG" alt="">
+    <img src="Gallery89.JPG" alt="">
+    <img src="Gallery90.JPG" alt="">
+    <img src="Gallery91.JPG" alt="">
+    <img src="Gallery92.JPG" alt="">
+    <img src="Gallery93.JPG" alt="">
+    <img src="Gallery94.JPG" alt="">
+    <img src="Gallery95.JPG" alt="">
+    <img src="Gallery96.JPG" alt="">
+    <img src="Gallery97.JPG" alt="">
+    <img src="Gallery98.JPG" alt="">
+    <img src="Gallery99.JPG" alt="">
+    <img src="Gallery100.JPG" alt="">
+
+    <!-- Add more images as needed -->
+  </div>
+
+  <a href="index.html" class="back">← Back to Home</a>
+
+  <!-- Lightbox element -->
+  <div class="lightbox" id="lightbox">
+    <img id="lightbox-img" src="" alt="Expanded Image">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
