@@ -5,6 +5,35 @@
   <meta charset="UTF-8">
   <title>The Gorgeous George Show</title>
   <style>
+
+    .bottom-links {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.bottom-links a {
+  display: inline-block;
+}
+
+.column-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* spacing between GGmerch and Email */
+}
+
+.nav-icon {
+  width: 100px; /* or whatever size the others use */
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+.nav-icon:hover {
+  transform: scale(1.1);
+}
+
     html, body {
       margin: 0;
       padding: 0;
