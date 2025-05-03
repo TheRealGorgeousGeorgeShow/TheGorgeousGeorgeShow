@@ -91,7 +91,7 @@
 }
 
         .gallery {
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
   
@@ -270,23 +270,6 @@
 
 </script>
 
-    <script>
-  const footer = document.getElementById('site-footer');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        footer.style.opacity = 1;
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  observer.observe(footer);
-</script>
-
-
     <footer id="site-footer" style="
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
@@ -295,9 +278,26 @@
   font-size: 14px;
   opacity: 0;
   transition: opacity 1s ease;
+  margin-top: 100px;
 ">
   &copy; 2025 The Gorgeous George Show. All rights reserved.
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const footer = document.getElementById('site-footer');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          footer.style.opacity = 1;
+        }
+      });
+    }, { threshold: 0.1 });
+
+    observer.observe(footer);
+  });
+</script>
 
 </body>
 </html>
