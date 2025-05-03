@@ -51,6 +51,25 @@
     .logo {
       max-width: 260px;
     }
+
+    .link-img {
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+/* Individual custom sizes */
+.img-tggs { width: 260px; }
+.img-boston { width: 220px; }
+.img-pirate { width: 300px; }
+.img-legacy { width: 280px; }
+.img-bank { width: 250px; }
+.img-credit { width: 240px; }
+.img-still { width: 230px; }
+
+.link-img:hover {
+  transform: scale(1.05);
+}
+
   </style>
 </head>
 <body>
@@ -61,31 +80,34 @@
     <!-- LEFT COLUMN -->
     <div class="column">
       <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">
-        <img src="TGGS link.png" alt="The Gorgeous George Show">
-      </a>
-      <a href="https://www.youtube.com/@StoneColdSteveBahferston" target="_blank">
-        <img src="BostonSoul (1).png" alt="Stone Cold Steve Bahferston">
-      </a>
-      <a href="https://www.youtube.com/@Americanpirate1723" target="_blank">
-        <img src="AmericanPirate.png" alt="American Pirate">
-      </a>
-      <a href="https://www.youtube.com/@gorgeousgeorgelegacy9857" target="_blank">
-        <img src="GG Legacy.png" alt="GG Legacy">
-      </a>
-    </div>
+  <img src="TGGS link.png" alt="The Gorgeous George Show" class="link-img img-tggs">
+</a>
 
-    <!-- RIGHT COLUMN -->
-    <div class="column">
-      <a href="https://www.youtube.com/@GGsNegativeBankAccount" target="_blank">
-        <img src="NegativeBank.png" alt="Negative Bank">
-      </a>
-      <a href="https://www.youtube.com/@GGNegCreditScore" target="_blank">
-        <img src="NegativeCredit (1).png" alt="Negative Credit Score">
-      </a>
-      <a href="https://www.youtube.com/@georgeyaridstillhasanegati9823" target="_blank">
-        <img src="NegativeStill.png" alt="Still Negative">
-      </a>
-    </div>
+<a href="https://www.youtube.com/@StoneColdSteveBahferston" target="_blank">
+  <img src="BostonSoul (1).png" alt="Stone Cold Steve Bahferston" class="link-img img-boston">
+</a>
+
+<a href="https://www.youtube.com/@Americanpirate1723" target="_blank">
+  <img src="AmericanPirate.png" alt="American Pirate" class="link-img img-pirate">
+</a>
+
+<a href="https://www.youtube.com/@gorgeousgeorgelegacy9857" target="_blank">
+  <img src="GG Legacy.png" alt="GG Legacy" class="link-img img-legacy">
+</a>
+
+<!-- RIGHT SIDE -->
+<a href="https://www.youtube.com/@GGsNegativeBankAccount" target="_blank">
+  <img src="NegativeBank.png" alt="Negative Bank" class="link-img img-bank">
+</a>
+
+<a href="https://www.youtube.com/@GGNegCreditScore" target="_blank">
+  <img src="NegativeCredit (1).png" alt="Negative Credit" class="link-img img-credit">
+</a>
+
+<a href="https://www.youtube.com/@georgeyaridstillhasanegati9823" target="_blank">
+  <img src="NegativeStill.png" alt="Still Negative" class="link-img img-still">
+</a>
+
 
   </div>
 
