@@ -22,15 +22,6 @@
   transform: scale(1.1);
 }
 
-    .bottom-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
 .action-icon {
   width: 300px;
   height: auto;
@@ -41,14 +32,25 @@
   transform: scale(1.1);
 }
 
-
-
- .bottom-links {
+    .bottom-actions {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 0px; /* adjust spacing between main items */
+  align-items: center;
+  gap: 40px; /* space between the icons */
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
+
+.bottom-icon {
+  width: 300px;     /* force same width */
+  height: auto;     /* auto height to keep proportions */
+  transition: transform 0.2s ease;
+  display: block;
+}
+.bottom-icon:hover {
+  transform: scale(1.1);
+}
+
 
 .column-link {
   display: flex;
