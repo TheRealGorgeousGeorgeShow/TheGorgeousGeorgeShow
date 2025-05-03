@@ -201,6 +201,10 @@
   <a href="gallery.html">
     <img src="PhotoGallery.png" alt="Gallery" class="icon-gallery">
   </a>
+</div>
+
+<!-- Bottom Link Row -->
+<div class="bottom-actions">
   <a href="mailto:therealgorgeousgeorgeshow@gmail.com">
     <img src="Email (1).png" alt="Email Us" class="icon-email">
   </a>
@@ -262,23 +266,38 @@
       }
     }
   });
+
+
 </script>
 
-  <footer style="
-  background: #000;
+    <script>
+  const footer = document.getElementById('site-footer');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        footer.style.opacity = 1;
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  observer.observe(footer);
+</script>
+
+
+    <footer id="site-footer" style="
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   text-align: center;
   padding: 20px 0;
   font-size: 14px;
+  opacity: 0;
+  transition: opacity 1s ease;
 ">
   &copy; 2025 The Gorgeous George Show. All rights reserved.
 </footer>
 
-
-
-
-
-
-    
 </body>
 </html>
