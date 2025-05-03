@@ -4,113 +4,85 @@
   <meta charset="UTF-8">
   <title>YouTube Channels</title>
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
       background: url('Logo2.JPG') no-repeat center center fixed;
       background-size: cover;
       font-family: Impact, sans-serif;
-      color: #fff;
+      color: white;
     }
 
     .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 80px;
-  box-sizing: border-box;
-  flex-wrap: nowrap; /* ← prevents wrapping */
-}
-
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 80px;
+      box-sizing: border-box;
+      flex-wrap: nowrap;
+    }
 
     .column {
       display: flex;
       flex-direction: column;
       gap: 20px;
-    }
-
-    .column a {
-      text-decoration: none;
-      color: white;
-      font-size: 24px;
-      text-align: center;
-      text-shadow:
-        -2px -2px 0 #000,
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000;
-    }
-
-    .column img {
-      max-width: 250px;
-      border-radius: 6px;
-    }
-
-    .logo {
-      max-width: 260px;
+      min-width: 250px;
     }
 
     .link-img {
-  border-radius: 6px;
-  transition: transform 0.3s ease;
-}
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
 
-/* Individual custom sizes */
-.img-tggs { width: 100px; }
-.img-boston { width: 100px; }
-.img-pirate { width: 100px; }
-.img-legacy { width: 100px; }
-.img-bank { width: 100px; }
-.img-credit { width: 100px; }
-.img-still { width: 100px; }
+    .link-img:hover {
+      transform: scale(1.05);
+    }
 
-.link-img:hover {
-  transform: scale(1.05);
-}
-
+    /* Individual image widths */
+    .img-tggs    { width: 200px; }
+    .img-boston  { width: 180px; }
+    .img-pirate  { width: 210px; }
+    .img-legacy  { width: 190px; }
+    .img-bank    { width: 200px; }
+    .img-credit  { width: 180px; }
+    .img-still   { width: 185px; }
   </style>
 </head>
 <body>
 
-  <!-- LEFT + RIGHT COLUMNS -->
   <div class="container">
 
     <!-- LEFT COLUMN -->
     <div class="column">
       <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">
-  <img src="TGGS link.png" alt="The Gorgeous George Show" class="link-img img-tggs">
-</a>
+        <img src="TGGS link.png" alt="The Gorgeous George Show" class="link-img img-tggs">
+      </a>
+      <a href="https://www.youtube.com/@StoneColdSteveBahferston" target="_blank">
+        <img src="BostonSoul (1).png" alt="Stone Cold Steve Bahferston" class="link-img img-boston">
+      </a>
+      <a href="https://www.youtube.com/@Americanpirate1723" target="_blank">
+        <img src="AmericanPirate.png" alt="American Pirate" class="link-img img-pirate">
+      </a>
+      <a href="https://www.youtube.com/@gorgeousgeorgelegacy9857" target="_blank">
+        <img src="GG Legacy.png" alt="GG Legacy" class="link-img img-legacy">
+      </a>
+    </div>
 
-<a href="https://www.youtube.com/@StoneColdSteveBahferston" target="_blank">
-  <img src="BostonSoul (1).png" alt="Stone Cold Steve Bahferston" class="link-img img-boston">
-</a>
-
-<a href="https://www.youtube.com/@Americanpirate1723" target="_blank">
-  <img src="AmericanPirate.png" alt="American Pirate" class="link-img img-pirate">
-</a>
-
-<a href="https://www.youtube.com/@gorgeousgeorgelegacy9857" target="_blank">
-  <img src="GG Legacy.png" alt="GG Legacy" class="link-img img-legacy">
-</a>
-
-<!-- RIGHT COLUMN -->
+    <!-- RIGHT COLUMN -->
     <div class="column">
-<a href="https://www.youtube.com/@GGsNegativeBankAccount" target="_blank">
-  <img src="NegativeBank.png" alt="Negative Bank" class="link-img img-bank">
-</a>
-
-<a href="https://www.youtube.com/@GGNegCreditScore" target="_blank">
-  <img src="NegativeCredit (1).png" alt="Negative Credit" class="link-img img-credit">
-</a>
-
-<a href="https://www.youtube.com/@georgeyaridstillhasanegati9823" target="_blank">
-  <img src="NegativeStill.png" alt="Still Negative" class="link-img img-still">
-</a>
-
+      <a href="https://www.youtube.com/@GGsNegativeBankAccount" target="_blank">
+        <img src="NegativeBank.png" alt="Negative Bank" class="link-img img-bank">
+      </a>
+      <a href="https://www.youtube.com/@GGNegCreditScore" target="_blank">
+        <img src="NegativeCredit (1).png" alt="Negative Credit Score" class="link-img img-credit">
+      </a>
+      <a href="https://www.youtube.com/@georgeyaridstillhasanegati9823" target="_blank">
+        <img src="NegativeStill.png" alt="Still Negative" class="link-img img-still">
+      </a>
+    </div>
 
   </div>
 
