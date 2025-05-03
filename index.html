@@ -6,68 +6,7 @@
   <title>The Gorgeous George Show</title>
   <style>
 
-    .contact-link {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
 
-.email-icon {
-  width: 300px; 
-  height: auto;
-  transition: transform 0.2s ease;
-}
-
-.email-icon:hover {
-  transform: scale(1.1);
-}
-
-.action-icon {
-  width: 300px;
-  height: auto;
-  transition: transform 0.2s ease;
-}
-
-.action-icon:hover {
-  transform: scale(1.1);
-}
-
-    .bottom-actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px; /* space between the icons */
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.bottom-icon {
-  width: 300px;     /* force same width */
-  height: auto;     /* auto height to keep proportions */
-  transition: transform 0.2s ease;
-  display: block;
-}
-.bottom-icon:hover {
-  transform: scale(1.1);
-}
-
-
-.column-link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0px;
-}
-
-.nav-icon {
-  width: 100px; /* keep size consistent */
-  height: auto;
-  transition: transform 0.2s ease;
-}
-
-.nav-icon:hover {
-  transform: scale(1.1);
-}
 
    html, body {
       margin: 0;
@@ -185,29 +124,95 @@
       <img src="Rump.JPG" alt="Slide 9">
       <img src="KeepOut.jpg" alt="Slide 10">
     </div>
-  
+
+
+    <style>
+  .bottom-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-top: 40px;
+  }
+
+  .bottom-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  /* Individual image sizes */
+  .icon-yt {
+    width: 100px;
+    height: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .icon-merch {
+    width: 95px;
+    height: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .icon-gallery {
+    width: 105px;
+    height: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .icon-email {
+    width: 90px;
+    height: auto;
+    transition: transform 0.2s ease;
+  }
+
+  .icon-familytree {
+    width: 110px;
+    height: auto;
+    transition: transform 0.2s ease;
+  }
+
+  /* Shared hover effect */
+  .icon-yt:hover,
+  .icon-merch:hover,
+  .icon-gallery:hover,
+  .icon-email:hover,
+  .icon-familytree:hover {
+    transform: scale(1.1);
+  }
+</style>
 
   
-<!-- Bottom links -->
+ 
+<!-- Top Link Row -->
 <div class="bottom-links">
   <a href="youtube.html">
-    <img src="YoutubeLinks.png" alt="Visit YouTube" class="nav-icon">
+    <img src="YTlinks.PNG" alt="YouTube" class="icon-yt">
   </a>
-
   <a href="merch.html">
-    <img src="MerchStore.png" alt="Visit Merch Store" class="nav-icon">
+    <img src="GGmerch.PNG" alt="Merch" class="icon-merch">
   </a>
-
   <a href="gallery.html">
-    <img src="PhotoGallery.png" alt="Photo Gallery" class="nav-icon">
+    <img src="Photo.PNG" alt="Gallery" class="icon-gallery">
   </a>
 </div>
 
-  
+<!-- Bottom Link Row -->
+<div class="bottom-actions">
+  <a href="mailto:therealgorgeousgeorgeshow@gmail.com">
+    <img src="Email.PNG" alt="Email Us" class="icon-email">
+  </a>
+  <a href="FamilyTree.html">
+    <img src="FamilyTree.PNG" alt="Family Tree" class="icon-familytree">
+  </a>
+</div>
 
 
-  
-  <!-- Slideshow script -->
+    
+ <!-- Slideshow script -->
   <script>
     let slides = document.querySelectorAll('.slideshow img');
     let currentSlide = 0;
@@ -259,22 +264,6 @@
     }
   });
 </script>
-
-  <div class="contact-link">
-  <a href="mailto:therealgorgeousgeorgeshow@gmail.com">
-    <img src="Email (1).png" alt="Email Us" class="email-icon">
-  </a>
-
-    <a href="FamilyTree.html">
-  <img src="YaridianHistory.png" alt="Family Tree" class="nav-icon">
- 
-</a>
-
-</div>
-
-
-
-
-
+    
 </body>
 </html>
