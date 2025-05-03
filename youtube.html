@@ -12,23 +12,23 @@
       background-size: cover;
       font-family: Impact, sans-serif;
       color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .container {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0px;
-      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 80px;
+      box-sizing: border-box;
     }
 
     .column {
       display: flex;
       flex-direction: column;
-      gap: 0px;
+      gap: 20px;
     }
 
     .column a {
@@ -43,54 +43,49 @@
          2px  2px 0 #000;
     }
 
+    .column img {
+      max-width: 250px;
+      border-radius: 6px;
+    }
+
     .logo {
       max-width: 260px;
     }
   </style>
 </head>
 <body>
-<!-- FORCE FULL-WIDTH CONTAINER -->
-<div style="
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 80px;
-  box-sizing: border-box;
-">
 
-  <!-- LEFT COLUMN -->
-  <div style="display: flex; flex-direction: column; gap: 20px;">
-    <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">
-      <img src="TGGS link.png" style="max-width: 250px; border-radius: 6px;">
-    </a>
-    <a href="https://www.youtube.com/@StoneColdSteveBahferston" target="_blank">
-      <img src="BostonSoul (1).png" style="max-width: 250px; border-radius: 6px;">
-    </a>
-    <a href="https://www.youtube.com/@Americanpirate1723" target="_blank">
-      <img src="AmericanPirate.png" style="max-width: 250px; border-radius: 6px;">
-    </a>
-    <a href="https://www.youtube.com/@gorgeousgeorgelegacy9857" target="_blank">
-      <img src="GG Legacy.png" style="max-width: 250px; border-radius: 6px;">
-    </a>
-  </div>
+  <!-- LEFT + RIGHT COLUMNS -->
+  <div class="container">
 
-  <!-- RIGHT COLUMN -->
-  <div style="display: flex; flex-direction: column; gap: 20px;">
-    <a href="https://www.youtube.com/@GGsNegativeBankAccount" target="_blank">
-      <img src="NegativeBank.png" style="max-width: 250px; border-radius: 6px;">
-    </a>
-    <a href="https://www.youtube.com/@GGNegCreditScore" target="_blank">
-      <img src="NegativeCredit (1).png" style="max-width: 250px; border-radius: 6px;">
-    </a>
-    <a href="https://www.youtube.com/@georgeyaridstillhasanegati9823" target="_blank">
-      <img src="NegativeStill.png" style="max-width: 250px; border-radius: 6px;">
-    </a>
-  </div>
+    <!-- LEFT COLUMN -->
+    <div class="column">
+      <a href="https://www.youtube.com/@TheGorgeousGeorgeShow" target="_blank">
+        <img src="TGGS link.png" alt="The Gorgeous George Show">
+      </a>
+      <a href="https://www.youtube.com/@StoneColdSteveBahferston" target="_blank">
+        <img src="BostonSoul (1).png" alt="Stone Cold Steve Bahferston">
+      </a>
+      <a href="https://www.youtube.com/@Americanpirate1723" target="_blank">
+        <img src="AmericanPirate.png" alt="American Pirate">
+      </a>
+      <a href="https://www.youtube.com/@gorgeousgeorgelegacy9857" target="_blank">
+        <img src="GG Legacy.png" alt="GG Legacy">
+      </a>
+    </div>
 
-</div>
+    <!-- RIGHT COLUMN -->
+    <div class="column">
+      <a href="https://www.youtube.com/@GGsNegativeBankAccount" target="_blank">
+        <img src="NegativeBank.png" alt="Negative Bank">
+      </a>
+      <a href="https://www.youtube.com/@GGNegCreditScore" target="_blank">
+        <img src="NegativeCredit (1).png" alt="Negative Credit Score">
+      </a>
+      <a href="https://www.youtube.com/@georgeyaridstillhasanegati9823" target="_blank">
+        <img src="NegativeStill.png" alt="Still Negative">
+      </a>
+    </div>
 
   </div>
 
