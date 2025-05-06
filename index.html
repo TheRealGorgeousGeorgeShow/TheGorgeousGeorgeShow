@@ -5,10 +5,7 @@
   <meta charset="UTF-8">
   <title>The Gorgeous George Show</title>
   <style>
-
-
-
-   html, body {
+    html, body {
       margin: 0;
       padding: 0;
       background: url('Clearbackground (2).JPG') no-repeat center center fixed;
@@ -20,19 +17,19 @@
       overflow-x: hidden;
     }
 
-    /* Top logo (normal, not fixed) */
     .top-logo {
-      width: 100%;
-      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
       background: rgba(0, 0, 0, 0.5);
+      padding: 20px 0;
     }
 
     .top-logo img {
-      max-width: 300px;
       height: auto;
     }
 
-    /* Main content area (video + slideshow) */
     .page-content {
       display: flex;
       justify-content: center;
@@ -73,62 +70,89 @@
       position: relative;
     }
 
-      .media-row {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-  flex-wrap: wrap; /* allows stacking on smaller screens */
-}
+    .media-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
 
-.media-box {
-  width: 500px;  /* set your preferred size */
-  height: 280px;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .media-box {
+      width: 500px;
+      height: 280px;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .gallery {
-  padding-bottom: 500px;
-}
+    .gallery {
+      padding-bottom: 500px;
+    }
 
     .extra-video {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
 
-.extra-video video {
-  width: 700px;
-  max-width: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 10px black;
-}
+    .extra-video video {
+      width: 700px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px black;
+    }
 
-  
+    .bottom-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      margin-top: 40px;
+    }
+
+    .bottom-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .icon-yt { width: 200px; height: auto; transition: transform 0.2s ease; }
+    .icon-merch { width: 340px; height: auto; transition: transform 0.2s ease; }
+    .icon-gallery { width: 220px; height: auto; transition: transform 0.2s ease; }
+    .icon-email { width: 220px; height: auto; transition: transform 0.2s ease; }
+    .icon-familytree { width: 200px; height: auto; transition: transform 0.2s ease; }
+    .icon-cameo { width: 150px; height: auto; transition: transform 0.2s ease; }
+
+    .icon-yt:hover,
+    .icon-merch:hover,
+    .icon-gallery:hover,
+    .icon-email:hover,
+    .icon-familytree:hover,
+    .icon-cameo:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- Logo -->
+  <!-- Logo with Goon Crests -->
   <div class="top-logo">
-    <img src="Logo.PNG" alt="The Gorgeous George Show Logo">
+    <img src="GoonCrest.png" alt="Goon Crest Left" style="max-width: 100px;">
+    <img src="Logo.PNG" alt="The Gorgeous George Show Logo" style="max-width: 300px;">
+    <img src="GoonCrest.png" alt="Goon Crest Right" style="max-width: 100px;">
   </div>
 
-
-
-
-<!-- Video and Slideshow -->
+  <!-- Video and Slideshow -->
   <div class="page-content">
-    <!-- Left side: Video -->
     <div class="video-box">
       <video src="Pathetic.mp4" controls muted></video>
     </div>
-
-    <!-- Right side: Slideshow -->
     <div class="slideshow">
       <img src="1307(1).JPG" class="active" alt="Slide 1">
       <img src="1307(2).jpg" alt="Slide 2">
@@ -140,195 +164,102 @@
       <img src="Overgrowth3.PNG" alt="Slide 8">
       <img src="Van on Lawn.jpg" alt="Slide 9">
     </div>
+  </div>
 
-    <!-- New Centered Video Under Slideshow -->
-<div class="extra-video">
-  <video src="Ode to Sue.MP4" controls></video>
-</div>
+  <!-- Extra Video -->
+  <div class="extra-video">
+    <video src="Ode to Sue.MP4" controls></video>
+  </div>
 
+  <!-- Top Link Row -->
+  <div class="bottom-links">
+    <a href="youtube.html"><img src="YoutubeLinks.png" alt="YouTube" class="icon-yt"></a>
+    <a href="merch.html"><img src="MerchStore.png" alt="Merch" class="icon-merch"></a>
+    <a href="gallery.html"><img src="PhotoGallery.png" alt="Gallery" class="icon-gallery"></a>
+  </div>
 
+  <!-- Bottom Link Row -->
+  <div class="bottom-actions">
+    <a href="mailto:therealgorgeousgeorgeshow@gmail.com"><img src="Email (1).png" alt="Email Us" class="icon-email"></a>
+    <a href="FamilyTree.html"><img src="YaridianHistory.png" alt="Family Tree" class="icon-familytree"></a>
+    <a href="cameo.html"><img src="Cameo.png" alt="Cameo" class="icon-cameo"></a>
+  </div>
 
-    <style>
-  .bottom-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    margin-top: 40px;
-  }
-
-  .bottom-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
-  /* Individual image sizes */
-  .icon-yt {
-    width: 200px;
-    height: auto;
-    transition: transform 0.2s ease;
-  }
-
-  .icon-merch {
-    width: 340px;
-    height: auto;
-    transition: transform 0.2s ease;
-  }
-
-  .icon-gallery {
-    width: 220px;
-    height: auto;
-    transition: transform 0.2s ease;
-  }
-
-  .icon-email {
-    width: 220px;
-    height: auto;
-    transition: transform 0.2s ease;
-  }
-
-  .icon-familytree {
-    width: 200px;
-    height: auto;
-    transition: transform 0.2s ease;
-  }
-       .icon-cameo {
-    width: 150px;
-    height: auto;
-    transition: transform 0.2s ease;
-  }
-
-  /* Shared hover effect */
-  .icon-yt:hover,
-  .icon-merch:hover,
-  .icon-gallery:hover,
-  .icon-email:hover,
-  .icon-familytree:hover, 
-  .icon-cameo:hover {
-    transform: scale(1.1);
-  }
-</style>
-
-  
- 
-<!-- Top Link Row -->
-<div class="bottom-links">
-  <a href="youtube.html">
-    <img src="YoutubeLinks.png" alt="YouTube" class="icon-yt">
-  </a>
-  <a href="merch.html">
-    <img src="MerchStore.png" alt="Merch" class="icon-merch">
-  </a>
-  <a href="gallery.html">
-    <img src="PhotoGallery.png" alt="Gallery" class="icon-gallery">
-  </a>
-</div>
-
-<!-- Bottom Link Row -->
-<div class="bottom-actions">
-  <a href="mailto:therealgorgeousgeorgeshow@gmail.com">
-    <img src="Email (1).png" alt="Email Us" class="icon-email">
-  </a>
-  <a href="FamilyTree.html">
-    <img src="YaridianHistory.png" alt="Family Tree" class="icon-familytree">
-  </a>
-  <a href="cameo.html">
-    <img src="Cameo.png" alt="Family Tree" class="icon-cameo">
-  </a>
-
-</div>
-
-
-    
- <!-- Slideshow script -->
+  <!-- Slideshow script -->
   <script>
     let slides = document.querySelectorAll('.slideshow img');
     let currentSlide = 0;
-
     setInterval(() => {
       slides[currentSlide].classList.remove('active');
       currentSlide = (currentSlide + 1) % slides.length;
       slides[currentSlide].classList.add('active');
-    }, 3000); // change every 3 seconds
+    }, 3000);
   </script>
 
-<video id="bg-music" src="Saxophone.mp4" autoplay loop muted playsinline style="display: none;"></video>
+  <video id="bg-music" src="Saxophone.mp4" autoplay loop muted playsinline style="display: none;"></video>
 
-<button id="music-toggle" style="
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: #00ffcc;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000;
-">
-  ▶ Play Music
-</button>
+  <button id="music-toggle" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #00ffcc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;">
+    ▶ Play Music
+  </button>
 
-<script>
-  const music = document.getElementById('bg-music');
-  const button = document.getElementById('music-toggle');
-
-  let musicStarted = false;
-
-  button.addEventListener('click', () => {
-    if (!musicStarted) {
-      music.muted = false;
-      music.play();
-      button.textContent = '⏸ Pause Music';
-      musicStarted = true;
-    } else {
-      if (music.paused) {
+  <script>
+    const music = document.getElementById('bg-music');
+    const button = document.getElementById('music-toggle');
+    let musicStarted = false;
+    button.addEventListener('click', () => {
+      if (!musicStarted) {
+        music.muted = false;
         music.play();
         button.textContent = '⏸ Pause Music';
+        musicStarted = true;
       } else {
-        music.pause();
-        button.textContent = '▶ Play Music';
-      }
-    }
-  });
-
-
-</script>
-
-<footer id="site-footer" style="
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 1s ease;
-  margin-top: 100px;
-">
-  &copy; 2025 The Gorgeous George Show. All rights reserved.
-</footer>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const footer = document.getElementById('site-footer');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          footer.style.opacity = 1;
+        if (music.paused) {
+          music.play();
+          button.textContent = '⏸ Pause Music';
+        } else {
+          music.pause();
+          button.textContent = '▶ Play Music';
         }
-      });
-    }, { threshold: 0.1 });
+      }
+    });
+  </script>
 
-    observer.observe(footer);
-  });
-</script>
+  <footer id="site-footer" style="
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    margin-top: 100px;">
+    &copy; 2025 The Gorgeous George Show. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const footer = document.getElementById('site-footer');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            footer.style.opacity = 1;
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(footer);
+    });
+  </script>
 
 </body>
 </html>
