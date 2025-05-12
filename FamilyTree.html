@@ -2,19 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Linear Scrollable Timeline</title>
+  <title>Timeline</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
+      padding: 40px;
+      background: #fff;
+      font-family: sans-serif;
+      color: #000;
     }
     .timeline-container {
       overflow-x: auto;
-      overflow-y: hidden;
       white-space: nowrap;
-      padding: 50px 20px;
     }
     .timeline {
       display: flex;
@@ -30,9 +29,9 @@
     .event img {
       width: 200px;
       height: 120px;
-      border-radius: 8px;
-      border: 2px solid white;
+      border-radius: 6px;
       object-fit: cover;
+      border: 1px solid #ccc;
       cursor: pointer;
     }
     .event h4 {
@@ -40,64 +39,62 @@
       font-size: 14px;
       text-align: center;
     }
-    /* Modal Styles */
     .modal {
       display: none;
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0,0,0,0.8);
       justify-content: center;
       align-items: center;
-      z-index: 1000;
+      z-index: 999;
     }
     .modal-content {
       background: white;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 6px;
       color: black;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 600px;
-      width: 90%;
     }
     .close {
       float: right;
       font-size: 24px;
-      color: red;
       cursor: pointer;
+      color: red;
     }
   </style>
 </head>
 <body>
 
-<!-- TIMELINE STRUCTURE -->
 <div class="timeline-container">
   <div class="timeline">
 
-    <!-- Example Event -->
+    <!-- Sample event -->
     <div class="event">
       <img src="placeholder.jpg" alt="Chapter 1" onclick="openModal('modal1')">
-      <h4>Chapter 1: Example Title</h4>
+      <h4>Chapter 1: Title Here</h4>
     </div>
     <div id="modal1" class="modal" onclick="closeModal('modal1')">
       <div class="modal-content" onclick="event.stopPropagation()">
         <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <h2>Chapter 1: Example Title</h2>
-        <p>This is where detailed info about the chapter or event goes.</p>
+        <h2>Chapter 1: Title Here</h2>
+        <p>Description goes here...</p>
       </div>
     </div>
 
-    <!-- Add more .event blocks here -->
+    <!-- Add more events below this line -->
 
   </div>
 </div>
 
-<!-- MODAL FUNCTIONALITY -->
 <script>
   function openModal(id) {
     document.getElementById(id).style.display = 'flex';
   }
   function closeModal(id) {
-    document.getElementById(id).style.display = 'none
+    document.getElementById(id).style.display = 'none';
+  }
+</script>
 
-
-    
+</body>
+</html>
