@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Timeline</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #fff;
+      font-family: sans-serif;
+      color: #000;
+    }
+    .timeline-container {
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .timeline {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .event {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      width: 200px;
+    }
+    .event img {
+      width: 200px;
+      height: 120px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    .event h4 {
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 6px;
+      color: black;
+    }
+    .close {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+      color: red;
+    }
+  </style>
+</head>
+<body>
 
+<div class="timeline-container">
+  <div class="timeline">
+
+    <!-- Sample event -->
+    <div class="event">
+      <img src="placeholder.jpg" alt="Chapter 1" onclick="openModal('modal1')">
+      <h4>Chapter 1: Title Here</h4>
+    </div>
+    <div id="modal1" class="modal" onclick="closeModal('modal1')">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Chapter 1: Title Here</h2>
+        <p>Description goes here...</p>
+      </div>
+    </div>
+
+    <!-- Add more events below this line -->
+
+  </div>
+</div>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+  function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
